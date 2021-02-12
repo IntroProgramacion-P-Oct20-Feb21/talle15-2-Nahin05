@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package paquetetres;
+package paqutedos;
 
 import java.util.Formatter;
 
@@ -13,14 +13,17 @@ import java.util.Formatter;
  */
 public class EscribirArchivo {
 
-    public static void mensajef(String datos) {
-        try {
-            Formatter out = new Formatter("data/Problema03");
-            out.format("%s\n", datos);
-            out.close();
+    public static void agregarEquipos(String infor){
+         try {
+            Formatter salida = new Formatter("data/informacion2.txt");
+            salida.format("%s\n", infor);
+            salida.close();
+
         } catch (Exception e) {
-            System.err.println("Error al crear el archivo");
+            System.err.println("Error al crear el archivo.");
             System.exit(1);
+
         }
     }
+    
 }
